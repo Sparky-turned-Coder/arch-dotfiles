@@ -91,5 +91,3 @@ vim.diagnostic.config({
 		end,
 	},
 })
-
-print("Hello, from Init.lua!")
