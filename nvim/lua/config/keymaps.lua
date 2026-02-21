@@ -33,3 +33,6 @@ vim.keymap.set("n", "<leader>a", ":wqa<CR>", { desc = "save and quit all" })
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set("n", "<leader>th", [[<cmd>split | term<cr>]], { desc = "Open terminal in horizontal split" })
 vim.keymap.set("n", "<leader>tv", [[<cmd>vsplit | term<cr>]], { desc = "Open terminal in vertical split" })
+
+-- Example mapping <Leader>f to format
+vim.keymap.set("n", "<Leader>f", "<Cmd>Format<CR>", { desc = "Format file" })

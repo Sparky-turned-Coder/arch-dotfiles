@@ -14,6 +14,7 @@ return {
 		},
 		config = function()
 			local cmp = require("cmp")
+			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 			-- Set up nvim-cmp
 			cmp.setup({
 				-- Define key mappings
@@ -26,13 +27,18 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item
 					["<C-e>"] = cmp.mapping.abort(), -- Abort completion
 				}),
-
 				-- Define completion sources and their priority
 				sources = {
 					{ name = "nvim_lsp" },
 					{ name = "buffer" },
 					{ name = "path" },
 				},
+				event = cmp.event:on(
+					"confirm_done",
+					cmp_autopairs.on_confirm_done({
+						map_char = { tex = "" },
+					})
+				),
 
 				-- Further customization (optional)
 				completion = {

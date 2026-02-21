@@ -13,13 +13,25 @@ return {
 				c = { "clang_format" },
 				cpp = { "clang_format" },
 				go = { "goimports", "gofumpt" },
+				html = { "prettier" },
 			},
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				pattern = "*",
-				callback = function(args)
-					require("conform").format({ bufnr = args.buf })
-				end,
-			}),
+			format_on_save = {
+				timeout_ms = 500,
+				async = false,
+				lsp_fallback = true, -- If no formatter defined, try LSP
+			},
+			-- 			vim.api.nvim_create_autocmd("BufWritePre", {
+			-- 				pattern = "*",
+			-- 				callback = function(args)
+			-- 					require("conform").format({ bufnr = args.buf })
+			-- 				end,
+			-- 			}),
 		},
+		init = function()
+			-- Set up a general keymap for formatting
+			vim.api.nvim_create_user_command("Format", function(args)
+				require("conform").format({ async = args.fargs, lsp_fallback = true })
+			end, { desc = "Format file", nargs = "?" })
+		end,
 	},
 }
