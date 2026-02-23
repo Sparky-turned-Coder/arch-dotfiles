@@ -5,7 +5,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal insert mode" })
 
 vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
-vim.keymap.set("n", "<leader>mpS", ":MarkdownPreviewStop<CR>")
+vim.keymap.set("n", "<leader>lp", ":LivePreview start<CR>")
 vim.keymap.set("n", "<leader>pv", ":Explore<CR>")
 vim.keymap.set("n", "<leader>o", ":update<CR> :source<CR>")
 vim.keymap.set("n", "<leader>w", ":write<CR>")
