@@ -37,13 +37,48 @@ return {
 				},
 			}
 
-			-- Set up servers with default config
-			--       local lspconfig = require('lspconfig')
-			--       require('mason-lspconfig').setup_handlers({
-			--         function(server_name)
-			--           lspconfig[server_name].setup({})
-			--         end,
-			--       })
+			vim.lsp.config.gopls = {
+				cmd = { "gopls" },
+				filetypes = { "go", "gomod", "gowork", "gotmpl" },
+				root_markers = { "go.mod", "go.sum", "go.work", ".git" },
+				settings = {
+					gopls = {
+						completeUnimported = true,
+						usePlaceholders = true,
+						analyses = {
+							unusedparams = true,
+						},
+					},
+				},
+			}
+
+			-- Enable the server (not sure if this is necessary yet)
+			vim.lsp.enable("gopls")
+
+			-- Optional: Keymaps and Formatting on Save
+			vim.api.nvim_create_autocmd("LspAttach", {
+				callback = function(args)
+					local client = vim.lsp.get_client_by_id(args.data.client_id)
+					if not client then
+						return
+					end
+
+					-- Enable semantic tokens (modern, non-deprecated)
+					if client.server_capabilities.semanticTokensProvider then
+						client.server_capabilities.semanticTokensProvider.full = true
+					end
+
+					if client.name == "gopls" then
+						-- Format on save
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							buffer = args.buf,
+							callback = function()
+								vim.lsp.buf.format({ async = false })
+							end,
+						})
+					end
+				end,
+			})
 		end,
 	},
 }

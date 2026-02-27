@@ -49,6 +49,13 @@ vim.api.nvim_create_autocmd("Filetype", {
 	end,
 })
 
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+	pattern = "*.go",
+	callback = function(args)
+		vim.treesitter.start(args.buf, "go")
+	end,
+})
+
 -- Force hidden terminal buffers to close when writing and quitting ALL
 vim.api.nvim_create_autocmd("ExitPre", {
 	pattern = "*",

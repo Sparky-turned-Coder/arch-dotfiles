@@ -6,7 +6,7 @@ return {
 		require("nvim-treesitter.config").setup({
 			install_dir = vim.fn.stdpath("data") .. "/site/parser",
 			-- A list of parser names, or "all"
-			ensure_installed = { "all" },
+			ensure_installed = {},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
 			sync_install = false,
