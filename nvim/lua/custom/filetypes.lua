@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		vim.bo.indentexpr = ""
 		vim.bo.autoindent = true
-		vim.bo.smartindent = false -- or true depending on your preference
+		vim.bo.smartindent = true -- or true depending on your preference
 	end,
 })
 

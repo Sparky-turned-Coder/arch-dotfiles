@@ -5,7 +5,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- Conform will run multiple formatters sequentially
-				python = { "isort", "black", "ruff" },
+				python = { "black", "isort", "ruff" },
 				-- You can customize some of the format options for the filetype (:help conform.format)
 				rust = { "rustfmt", lsp_format = "fallback" },
 				-- Conform will run the first available formatter
@@ -20,6 +20,7 @@ return {
 				async = false,
 				lsp_fallback = true, -- If no formatter defined, try LSP
 			},
+
 			-- 			vim.api.nvim_create_autocmd("BufWritePre", {
 			-- 				pattern = "*",
 			-- 				callback = function(args)
@@ -27,11 +28,11 @@ return {
 			-- 				end,
 			-- 			}),
 		},
-		init = function()
-			-- Set up a general keymap for formatting
-			vim.api.nvim_create_user_command("Format", function(args)
-				require("conform").format({ async = args.fargs, lsp_fallback = true })
-			end, { desc = "Format file", nargs = "?" })
-		end,
+		-- 		init = function()
+		-- 			-- Set up a general keymap for formatting
+		-- 			vim.api.nvim_create_user_command("Format", function(args)
+		-- 				require("conform").format({ async = args.fargs, lsp_fallback = true })
+		-- 			end, { desc = "Format file", nargs = "?" })
+		-- 		end,
 	},
 }

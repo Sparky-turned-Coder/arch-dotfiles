@@ -18,7 +18,6 @@ return {
 					"html",
 					"tailwindcss",
 					"pyright",
-					"jdtls",
 					"bashls",
 					"eslint",
 				},
