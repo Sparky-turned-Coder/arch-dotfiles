@@ -3,7 +3,7 @@ return {
 		"brianhuster/live-preview.nvim",
 		ft = { "html", "css", "javascript" },
 		opts = {
-			browser = "google-chrome-stable",
+			browser = "chromium",
 			address = "127.0.0.1",
 			dynamic_root = false,
 			picker = "mini-pick",

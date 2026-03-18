@@ -36,6 +36,14 @@ return {
 				},
 			}
 
+			vim.lsp.config.godotdev = {
+				editor_host = "127.0.0.1", -- Godot editor host
+				editor_port = 6007, -- Godot LSP port
+				debug_port = 6007, -- Godot debugger port
+				csharp = true, -- Enable C# Installation Support
+				autostart_editor_server = true, -- Enable auto start Nvim server
+			}
+
 			vim.lsp.config.gopls = {
 				cmd = { "gopls" },
 				filetypes = { "go", "gomod", "gowork", "gotmpl" },
@@ -53,6 +61,7 @@ return {
 
 			-- Enable the server (not sure if this is necessary yet)
 			vim.lsp.enable("gopls")
+			vim.lsp.enable("gdscript_lsp")
 
 			-- Optional: Keymaps and Formatting on Save
 			vim.api.nvim_create_autocmd("LspAttach", {

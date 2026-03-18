@@ -3,13 +3,13 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
-		require("nvim-treesitter.config").setup({
+		require("nvim-treesitter").setup({
 			install_dir = vim.fn.stdpath("data") .. "/site/parser",
 			-- A list of parser names, or "all"
-			ensure_installed = {},
+			ensure_installed = { "lua", "python" },
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
-			sync_install = false,
+			sync_install = true,
 
 			-- Automatically install missing parsers when entering buffer
 			auto_install = true,

@@ -10,6 +10,7 @@ vim.filetype.add({
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "python",
 	callback = function()
+		vim.treesitter.start()
 		vim.bo.indentexpr = ""
 		vim.bo.autoindent = true
 		vim.bo.smartindent = true -- or true depending on your preference
