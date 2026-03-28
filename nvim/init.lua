@@ -4,6 +4,7 @@ vim.g.maplocalleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = true
+vim.opt.linebreak = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = true
@@ -12,7 +13,7 @@ vim.opt.swapfile = false
 vim.opt.showmode = false
 vim.opt.undofile = true
 vim.opt.breakindent = true
-vim.opt.signcolumn = "yes"
+
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.splitright = true
@@ -21,6 +22,10 @@ vim.opt.cursorline = true
 vim.opt.confirm = true
 vim.opt.scrolloff = 12
 vim.opt.winborder = "rounded"
+vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "120"
+vim.opt.encoding = "UTF-8"
+vim.opt.clipboard = "unnamedplus"
 
 vim.g.have_nerd_font = true
 
@@ -29,6 +34,9 @@ require("config.keymaps")
 require("custom.filetypes")
 require("config.run-python")
 
+--====================
+--   Auto Commands
+--====================
 -- Highlight when yanking text
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight text when yanking (copying)",
@@ -38,17 +46,15 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
-end)
-
 -- No longer automatically comments out the next line following a comment
 vim.api.nvim_create_autocmd("Filetype", {
+	pattern = "*",
 	callback = function()
 		vim.opt_local.formatoptions:remove({ "c", "r", "o" })
 	end,
 })
 
+-- Automatically enable Tree-sitter syntax for Go files
 vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 	pattern = "*.go",
 	callback = function(args)
@@ -68,7 +74,9 @@ vim.api.nvim_create_autocmd("ExitPre", {
 	end,
 })
 
--- Diagnostic keymaps
+--===================
+--   Diagnostic
+--===================
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Configure diagnostic display
