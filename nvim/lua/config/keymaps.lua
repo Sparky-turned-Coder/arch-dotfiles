@@ -16,6 +16,8 @@ end, { expr = true, silent = true, desc = "Up (wrap-aware)" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal insert mode" })
 
+-- Opening split terminal
+
 vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
 vim.keymap.set("n", "<leader>lp", ":LivePreview start<CR>")
 vim.keymap.set("n", "<leader>pv", ":Explore<CR>")
@@ -66,7 +68,7 @@ vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" }
 
 vim.keymap.set("n", "<leader>a", ":wqa<CR>", { desc = "save and quit all" })
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-vim.keymap.set("n", "<leader>th", [[<cmd>split | term<cr>]], { desc = "Open terminal in horizontal split" })
+vim.keymap.set("n", "<leader>r", [[<cmd>split | term<cr>]], { desc = "Open terminal in horizontal split" })
 vim.keymap.set("n", "<leader>tv", [[<cmd>vsplit | term<cr>]], { desc = "Open terminal in vertical split" })
 
 -- show file path

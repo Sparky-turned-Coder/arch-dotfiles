@@ -23,7 +23,7 @@ vim.opt.confirm = true
 vim.opt.scrolloff = 12
 vim.opt.winborder = "rounded"
 vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "100"
 vim.opt.encoding = "UTF-8"
 vim.opt.clipboard = "unnamedplus"
 

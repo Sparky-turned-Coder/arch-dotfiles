@@ -49,6 +49,6 @@ local function run_python(focus_terminal)
 end
 
 -- Keymaps
-vim.keymap.set("n", "<leader>r", function()
+vim.keymap.set("n", "<leader>pt", function()
 	run_python(false)
 end, { desc = "Run Python file" })

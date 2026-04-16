@@ -9,7 +9,7 @@ return {
 		config = function()
 			require("vague").setup({
 				-- Don't set background
-				transparent = false,
+				transparent = true,
 				-- Disable bold/italic globally
 				bold = true,
 				italic = true,
