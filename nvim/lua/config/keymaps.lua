@@ -16,6 +16,8 @@ end, { expr = true, silent = true, desc = "Up (wrap-aware)" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal insert mode" })
 
+vim.keymap.set("n", "<leader>:Neo", ":Neotree<CR>", { desc = "Open Neo-tree." })
+
 -- Opening split terminal
 
 vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
