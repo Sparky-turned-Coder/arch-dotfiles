@@ -18,3 +18,13 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.cmd("filetype plugin indent on")
+
+-- Link semantic tokens to Treesitter or default groups
+
+-- This didn't work
+
+-- vim.cmd([[
+--   hi! link @lsp.type.variable @variable
+--   hi! link @lsp.typemod.variable.defaultlibrary @variable
+--   hi! link @lsp.mod.defaultlibrary @variable
+-- ]])

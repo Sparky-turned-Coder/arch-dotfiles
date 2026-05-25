@@ -50,6 +50,10 @@ return {
 				-- optional configuration here
 			})
 			vim.cmd("colorscheme vague")
+
+			vim.api.nvim_set_hl(0, "@variable", {
+				link = "Constant",
+			})
 		end,
 	},
 }

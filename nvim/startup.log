@@ -1,0 +1,422 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.249  000.248: event init
+000.634  000.385: early init
+000.760  000.125: locale set
+001.001  000.242: init first window
+002.295  001.294: inits 1
+002.315  000.020: window checked
+002.465  000.150: parsing arguments
+003.581  000.106  000.106: require('vim._core.shared')
+003.767  000.007  000.007: require('string.buffer')
+003.826  000.109  000.102: require('vim.inspect')
+003.938  000.095  000.095: require('vim._core.options')
+003.944  000.354  000.150: require('vim._core.editor')
+004.017  000.070  000.070: require('vim._core.system')
+004.020  000.596  000.065: require('vim._init_packages')
+004.024  000.963: init lua interpreter
+006.502  002.478: nvim_ui_attach
+007.708  001.206: nvim_set_client_info
+007.714  000.006: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.243  000.242: event init
+000.459  000.216: early init
+000.569  000.110: locale set
+000.767  000.198: init first window
+001.779  001.012: inits 1
+001.798  000.019: window checked
+001.910  000.112: parsing arguments
+002.962  000.101  000.101: require('vim._core.shared')
+003.145  000.007  000.007: require('string.buffer')
+003.202  000.106  000.099: require('vim.inspect')
+003.316  000.098  000.098: require('vim._core.options')
+003.322  000.352  000.148: require('vim._core.editor')
+003.403  000.079  000.079: require('vim._core.system')
+003.406  000.588  000.057: require('vim._init_packages')
+003.409  000.911: init lua interpreter
+003.495  000.085: expanding arguments
+003.519  000.025: inits 2
+004.110  000.590: init highlight
+004.112  000.002: waiting for UI
+004.322  000.210: done waiting for UI
+004.343  000.020: clear screen
+004.820  000.110  000.110: require('vim.keymap')
+006.596  000.256  000.256: sourcing nvim_exec2()
+006.644  000.009  000.009: require('vim._core.log')
+006.747  000.016  000.016: require('vim.tty')
+006.824  000.013  000.013: require('vim.F')
+007.820  003.471  003.066: require('vim._core.defaults')
+007.826  000.012: init default mappings & autocommands
+008.548  000.140  000.140: sourcing /usr/share/nvim/runtime/ftplugin.vim
+008.645  000.044  000.044: sourcing /usr/share/nvim/runtime/indent.vim
+008.739  000.024  000.024: sourcing /usr/share/nvim/archlinux.vim
+008.744  000.054  000.030: sourcing /etc/xdg/nvim/sysinit.vim
+010.409  000.525  000.525: require('lazy')
+010.450  000.024  000.024: require('ffi')
+010.532  000.040  000.040: require('vim.fs')
+010.705  000.169  000.169: require('vim.uri')
+010.727  000.273  000.064: require('vim.loader')
+010.884  000.138  000.138: require('lazy.stats')
+011.033  000.120  000.120: require('lazy.core.util')
+011.180  000.143  000.143: require('lazy.core.config')
+011.378  000.070  000.070: require('lazy.core.handler')
+011.795  000.199  000.199: require('lazy.pkg')
+011.802  000.327  000.128: require('lazy.core.meta')
+011.810  000.429  000.102: require('lazy.core.plugin')
+011.821  000.638  000.140: require('lazy.core.loader')
+012.131  000.147  000.147: require('lazy.core.fragments')
+015.868  000.100  000.100: require('lazy.core.handler.event')
+015.888  000.213  000.113: require('lazy.core.handler.ft')
+015.948  000.056  000.056: require('lazy.core.handler.keys')
+015.998  000.048  000.048: require('lazy.core.handler.cmd')
+016.135  000.040  000.040: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+016.153  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+016.241  000.002  000.002: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+016.252  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+016.381  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+016.388  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+016.650  000.077  000.077: sourcing nvim_exec2() called at /usr/share/nvim/runtime/filetype.lua:0
+016.653  000.130  000.053: sourcing /usr/share/nvim/runtime/filetype.lua
+016.655  000.150  000.020: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+016.751  000.002  000.002: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+016.766  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+017.104  000.028  000.028: require('vague.config.internal')
+017.106  000.336  000.308: require('vague')
+017.654  000.148  000.148: sourcing nvim_exec2() called at /home/sparky_dev/.local/share/nvim/lazy/vague.nvim/colors/vague.lua:0
+017.769  000.109  000.109: sourcing nvim_exec2() called at /home/sparky_dev/.local/share/nvim/lazy/vague.nvim/colors/vague.lua:0
+017.890  000.028  000.028: require('vague.groups.blink')
+017.918  000.026  000.026: require('vague.groups.cmp')
+017.949  000.029  000.029: require('vague.groups.common')
+017.979  000.025  000.025: require('vague.groups.dashboard')
+018.024  000.044  000.044: require('vague.groups.diff')
+018.071  000.045  000.045: require('vague.groups.fzf-lua')
+018.118  000.044  000.044: require('vague.groups.html')
+018.162  000.042  000.042: require('vague.groups.lsp-native')
+018.194  000.030  000.030: require('vague.groups.lsp-plugin')
+018.258  000.057  000.057: require('vague.groups.mini')
+018.292  000.031  000.031: require('vague.groups.modes')
+018.323  000.028  000.028: require('vague.groups.neotest')
+018.365  000.038  000.038: require('vague.groups.neotree')
+018.422  000.051  000.051: require('vague.groups.rainbow-delimiters')
+018.465  000.036  000.036: require('vague.groups.snacks-input')
+018.495  000.028  000.028: require('vague.groups.snacks-picker')
+018.558  000.060  000.060: require('vague.groups.syntax')
+018.601  000.031  000.031: require('vague.groups.telescope')
+018.727  000.124  000.124: require('vague.groups.treesitter')
+018.768  000.027  000.027: require('vague.groups.vim-better-whitespace')
+018.769  000.949  000.124: require('vague.groups')
+018.770  000.998  000.049: require('vague.highlights')
+019.352  000.176  000.176: require('vague.terminal')
+019.363  001.881  000.450: sourcing /home/sparky_dev/.local/share/nvim/lazy/vague.nvim/colors/vague.lua
+019.370  002.180  000.298: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+019.420  000.007  000.007: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+019.428  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+020.219  000.108  000.108: require('mason-core.path')
+020.678  000.046  000.046: require('mason-core.functional.data')
+020.718  000.036  000.036: require('mason-core.functional.function')
+020.762  000.039  000.039: require('mason-core.functional.list')
+020.813  000.045  000.045: require('mason-core.functional.relation')
+020.849  000.032  000.032: require('mason-core.functional.logic')
+020.879  000.028  000.028: require('mason-core.functional.number')
+020.930  000.034  000.034: require('mason-core.functional.string')
+020.975  000.032  000.032: require('mason-core.functional.table')
+021.007  000.029  000.029: require('mason-core.functional.type')
+021.010  000.679  000.360: require('mason-core.functional')
+021.047  000.825  000.145: require('mason-core.platform')
+021.119  000.070  000.070: require('mason.settings')
+021.124  001.332  000.329: require('mason-core.installer.InstallLocation')
+021.255  000.059  000.059: require('mason-core.log')
+021.258  000.090  000.031: require('mason-core.EventEmitter')
+021.325  000.066  000.066: require('mason-registry.sources')
+021.496  000.370  000.214: require('mason-registry')
+021.498  001.936  000.234: require('mason')
+021.965  000.065  000.065: require('mason.api.command')
+023.113  001.000  001.000: require('vim.filetype')
+023.466  000.033  000.033: require('luasnip.util.types')
+023.470  000.081  000.047: require('luasnip.util.ext_opts')
+023.633  000.048  000.048: require('luasnip.util.lazy_table')
+023.692  000.058  000.058: require('luasnip.extras.filetype_functions')
+023.701  000.177  000.072: require('luasnip.default_config')
+023.703  000.233  000.055: require('luasnip.session')
+023.705  000.453  000.140: require('luasnip.config')
+023.728  001.641  000.188: sourcing /home/sparky_dev/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.lua
+023.732  001.677  000.036: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+023.769  000.019  000.019: sourcing /home/sparky_dev/.local/share/nvim/lazy/LuaSnip/plugin/luasnip.vim
+023.770  000.033  000.014: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+023.774  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+023.781  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+023.883  000.041  000.041: sourcing /home/sparky_dev/.local/share/nvim/lazy/conform.nvim/plugin/conform.lua
+023.910  000.077  000.037: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+023.914  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+023.921  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+024.344  000.336  000.336: require('conform')
+025.137  000.239  000.239: require('vim.treesitter.language')
+025.178  000.039  000.039: require('vim.func')
+025.235  000.055  000.055: require('vim.treesitter._range')
+025.256  000.019  000.019: require('vim.func._memoize')
+025.275  000.542  000.190: require('vim.treesitter.query')
+025.285  000.650  000.108: require('vim.treesitter.languagetree')
+025.289  000.708  000.058: require('vim.treesitter')
+025.385  000.861  000.153: sourcing /home/sparky_dev/.local/share/nvim/lazy/nvim-treesitter/plugin/filetypes.lua
+025.388  000.876  000.014: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+025.440  000.034  000.034: sourcing /home/sparky_dev/.local/share/nvim/lazy/nvim-treesitter/plugin/nvim-treesitter.lua
+025.442  000.050  000.015: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+025.471  000.017  000.017: sourcing /home/sparky_dev/.local/share/nvim/lazy/nvim-treesitter/plugin/query_predicates.lua
+025.473  000.028  000.011: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+025.492  000.002  000.002: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+025.498  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+025.864  000.307  000.307: require('nvim-treesitter')
+025.897  000.031  000.031: require('nvim-treesitter.config')
+026.053  000.060  000.060: require('rest-nvim.autocmds')
+026.108  000.037  000.037: require('rest-nvim.commands')
+026.147  000.033  000.033: require('rest-nvim.ui.highlights')
+026.149  000.214  000.084: sourcing /home/sparky_dev/.local/share/nvim/lazy/rest.nvim/plugin/rest-nvim.lua
+026.151  000.227  000.013: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+026.156  000.002  000.002: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+026.193  000.016  000.016: sourcing /home/sparky_dev/.local/share/nvim/lazy/rest.nvim/ftdetect/http.lua
+026.195  000.027  000.011: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+026.198  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+026.364  000.025  000.025: sourcing /home/sparky_dev/.local/share/nvim/lazy/nvim-web-devicons/plugin/nvim-web-devicons.vim
+026.367  000.037  000.012: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+026.370  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+026.375  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+026.609  000.037  000.037: require('nvim-web-devicons.filetypes')
+026.841  000.205  000.205: require('nvim-web-devicons.default.icons_by_filename')
+027.048  000.206  000.206: require('nvim-web-devicons.default.icons_by_file_extension')
+027.115  000.066  000.066: require('nvim-web-devicons.default.icons_by_operating_system')
+027.141  000.024  000.024: require('nvim-web-devicons.default.icons_by_desktop_environment')
+027.177  000.036  000.036: require('nvim-web-devicons.default.icons_by_window_manager')
+027.178  000.561  000.025: require('nvim-web-devicons.icons-default')
+027.339  000.869  000.271: require('nvim-web-devicons')
+029.128  000.161  000.161: require('render-markdown.settings')
+029.132  000.232  000.071: require('render-markdown')
+029.166  000.033  000.033: require('render-markdown.lib.presets')
+029.278  000.028  000.028: require('render-markdown.lib.compat')
+029.329  000.019  000.019: require('render-markdown.lib.list')
+029.334  000.054  000.036: require('render-markdown.lib.env')
+029.428  000.018  000.018: require('render-markdown.lib.interval')
+029.448  000.019  000.019: require('render-markdown.lib.str')
+029.450  000.060  000.022: require('render-markdown.lib.line')
+029.472  000.021  000.021: require('render-markdown.lib.resolved')
+029.501  000.028  000.028: require('render-markdown.lib.iter')
+029.503  000.141  000.032: require('render-markdown.lib.config')
+029.508  000.171  000.030: require('render-markdown.state')
+029.544  000.033  000.033: require('render-markdown.core.ts')
+029.624  000.040  000.040: require('render-markdown.request.context')
+029.667  000.042  000.042: require('render-markdown.core.log')
+029.672  000.127  000.045: require('render-markdown.core.ui')
+029.722  000.046  000.046: require('render-markdown.core.colors')
+029.851  000.041  000.041: require('render-markdown.api')
+029.854  000.078  000.036: require('render-markdown.core.command')
+029.914  000.045  000.045: require('render-markdown.core.manager')
+029.967  001.095  000.248: sourcing /home/sparky_dev/.local/share/nvim/lazy/render-markdown.nvim/plugin/render-markdown.lua
+029.972  001.115  000.020: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+029.978  000.002  000.002: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+029.986  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+030.153  000.002  000.002: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+030.159  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+030.598  000.077  000.077: require('mason-lspconfig.settings')
+030.603  000.277  000.200: require('mason-lspconfig')
+030.773  000.164  000.164: require('mason-core.async')
+030.902  000.059  000.059: require('mason-core.async.uv')
+030.909  000.132  000.074: require('mason-core.fs')
+031.370  000.236  000.236: require('mason-core.result')
+031.671  000.008  000.008: require('vim._core.vimfn')
+031.807  000.284  000.276: require('mason-core.process')
+031.969  000.161  000.161: require('mason-core.spawn')
+031.981  000.507  000.062: require('mason-core.installer.managers.powershell')
+032.113  000.129  000.129: require('mason.version')
+032.115  000.741  000.105: require('mason-core.fetch')
+032.346  000.225  000.225: require('mason-core.providers')
+032.516  000.112  000.112: require('mason-core.optional')
+032.796  000.143  000.143: require('mason-core.purl')
+032.858  000.059  000.059: require('mason-core.async.control')
+032.871  000.275  000.073: require('mason-core.package.AbstractPackage')
+033.498  000.333  000.333: require('mason-core.installer.compiler.expr')
+033.537  000.459  000.126: require('mason-core.installer.compiler.link')
+034.615  000.308  000.308: require('mason-core.installer.context.InstallContextCwd')
+034.769  000.149  000.149: require('mason-core.installer.context.InstallContextFs')
+034.845  000.075  000.075: require('mason-core.installer.context.InstallContextSpawn')
+034.880  000.033  000.033: require('mason-core.receipt')
+034.893  000.802  000.237: require('mason-core.installer.context')
+034.894  001.094  000.292: require('mason-core.installer')
+034.905  001.264  000.169: require('mason-core.installer.managers.std')
+034.907  001.369  000.105: require('mason-core.installer.compiler.schemas')
+034.932  000.024  000.024: require('mason-core.installer.compiler.util')
+034.939  001.973  000.122: require('mason-core.installer.compiler')
+034.967  000.027  000.027: require('mason-core.installer.linker')
+034.970  002.097  000.096: require('mason-core.installer.InstallRunner')
+034.994  000.022  000.022: require('mason-core.installer.UninstallRunner')
+034.998  002.480  000.085: require('mason-core.package')
+035.000  002.653  000.060: require('mason-registry.sources.util')
+035.005  004.012  000.158: require('mason-registry.sources.github')
+035.432  000.035  000.035: require('mason-registry.sources.synthesized')
+039.139  000.024  000.024: require('mason-lspconfig.mappings')
+039.141  000.055  000.031: require('mason-lspconfig.features.automatic_enable')
+043.493  000.766  000.766: require('vim.lsp.protocol')
+043.526  000.827  000.061: require('vim.lsp.log')
+043.730  000.027  000.027: require('vim._core.util')
+043.787  000.234  000.207: require('vim.lsp.util')
+043.922  000.053  000.053: require('vim.lsp.sync')
+043.929  000.140  000.087: require('vim.lsp._changetracking')
+044.041  000.058  000.058: require('vim.lsp._transport')
+044.049  000.007  000.007: require('vim._core.stringbuffer')
+044.091  000.160  000.095: require('vim.lsp.rpc')
+044.161  001.563  000.201: require('vim.lsp')
+046.341  000.265  000.265: require('lspconfig.util')
+049.585  000.112  000.112: require('mason-lspconfig.notify')
+049.620  000.243  000.131: require('mason-lspconfig.api.command')
+049.839  000.126  000.126: sourcing /home/sparky_dev/.local/share/nvim/lazy/nvim-lspconfig/plugin/lspconfig.lua
+049.844  000.152  000.026: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+049.866  000.003  000.003: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+049.952  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+053.625  000.007  000.007: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+053.635  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+053.797  000.002  000.002: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+053.802  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+054.168  000.363  000.363: require('mini.pick')
+054.302  000.042  000.042: require('vim.ui')
+054.342  000.003  000.003: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+054.347  000.001  000.001: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+054.555  000.165  000.165: require('lazydev')
+054.585  000.028  000.028: require('lazydev.config')
+054.636  000.023  000.023: require('lazydev.util')
+054.723  000.025  000.025: sourcing /usr/share/nvim/runtime/plugin/editorconfig.lua
+054.726  000.040  000.015: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+054.853  000.116  000.116: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+054.855  000.125  000.010: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+054.891  000.026  000.026: sourcing /usr/share/nvim/runtime/plugin/man.lua
+054.893  000.035  000.009: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.133  000.117  000.117: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+055.143  000.240  000.123: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+055.145  000.249  000.009: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.233  000.076  000.076: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+055.235  000.086  000.009: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.286  000.041  000.041: sourcing /usr/share/nvim/runtime/plugin/net.lua
+055.288  000.050  000.009: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.531  000.126  000.126: sourcing /usr/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+055.542  000.244  000.118: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+055.543  000.252  000.008: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.596  000.030  000.030: sourcing /usr/share/nvim/runtime/plugin/osc52.lua
+055.598  000.051  000.021: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.695  000.085  000.085: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+055.697  000.096  000.011: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.757  000.044  000.044: sourcing /usr/share/nvim/runtime/plugin/shada.lua
+055.759  000.058  000.014: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.799  000.019  000.019: sourcing /usr/share/nvim/runtime/plugin/spellfile.lua
+055.801  000.039  000.020: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.886  000.058  000.058: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+055.888  000.072  000.014: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+055.918  000.011  000.011: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+055.919  000.021  000.011: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+056.012  000.077  000.077: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+056.014  000.087  000.010: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+056.096  046.777  025.222: require('config.lazy')
+056.239  000.141  000.141: require('config.keymaps')
+056.357  000.020  000.020: sourcing /usr/share/nvim/runtime/filetype.lua
+056.418  000.007  000.007: sourcing /usr/share/nvim/runtime/ftplugin.vim
+056.464  000.004  000.004: sourcing /usr/share/nvim/runtime/indent.vim
+056.473  000.204  000.172: sourcing nvim_exec2() called at /home/sparky_dev/.dotfiles/nvim/init.lua:0
+056.475  000.235  000.031: require('custom.filetypes')
+056.506  000.030  000.030: require('config.run-python')
+056.578  000.059  000.059: require('vim.diagnostic')
+056.680  000.023  000.023: require('vim.diagnostic._severity')
+056.686  000.077  000.054: require('vim.diagnostic._store')
+056.687  000.101  000.025: require('vim.diagnostic._config')
+056.690  047.888  000.546: sourcing /home/sparky_dev/.config/nvim/init.lua
+056.698  000.746: sourcing vimrc file(s)
+056.806  000.043  000.043: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+056.857  000.146  000.104: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+056.865  000.021: inits 3
+057.860  000.995: reading ShaDa
+059.066  000.093  000.093: sourcing /usr/share/nvim/runtime/ftplugin/lua.vim
+062.558  000.102  000.102: require('vim.treesitter.highlighter')
+064.476  005.394  005.292: sourcing /usr/share/nvim/runtime/ftplugin/lua.lua
+064.915  000.034  000.034: sourcing /usr/share/nvim/runtime/indent/lua.vim
+065.149  000.040  000.040: require('vim.version')
+065.964  000.877  000.837: require('luasnip.util.vimversion')
+065.969  000.951  000.074: require('luasnip.util.util')
+066.032  000.061  000.061: require('luasnip.util.path')
+066.138  000.024  000.024: require('luasnip.session.snippet_collection.source')
+066.160  000.021  000.021: require('luasnip.util.table')
+066.183  000.022  000.022: require('luasnip.util.auto_table')
+066.188  000.111  000.045: require('luasnip.session.snippet_collection')
+066.234  000.045  000.045: require('luasnip.util.log')
+066.238  000.204  000.048: require('luasnip.loaders.util')
+066.261  000.022  000.022: require('luasnip.loaders.data')
+066.380  000.118  000.118: require('luasnip.loaders.fs_watchers')
+066.383  001.441  000.084: require('luasnip.loaders')
+066.600  000.032  000.032: require('luasnip.util.directed_graph')
+066.626  000.024  000.024: require('luasnip.session.enqueueable_operations')
+066.631  000.114  000.058: require('luasnip.loaders.from_lua')
+066.912  000.031  000.031: require('luasnip.util.str')
+066.933  000.019  000.019: require('luasnip.nodes.key_indexer')
+066.959  000.026  000.026: require('luasnip.util.feedkeys')
+067.001  000.041  000.041: require('luasnip.nodes.util.snippet_string')
+067.006  000.167  000.051: require('luasnip.nodes.util')
+067.027  000.021  000.021: require('luasnip.util.events')
+067.046  000.018  000.018: require('luasnip.nodes.optional_arg')
+067.055  000.261  000.055: require('luasnip.nodes.node')
+067.141  000.022  000.022: require('luasnip.util.extend_decorator')
+067.150  000.090  000.068: require('luasnip.nodes.insertNode')
+067.178  000.026  000.026: require('luasnip.nodes.textNode')
+067.207  000.028  000.028: require('luasnip.util.mark')
+067.318  000.026  000.026: require('luasnip.util.select')
+067.340  000.020  000.020: require('luasnip.util.time')
+067.593  000.335  000.289: require('luasnip.util._builtin_vars')
+067.653  000.445  000.110: require('luasnip.util.environ')
+067.685  000.031  000.031: require('luasnip.util.pattern_tokenizer')
+067.707  000.021  000.021: require('luasnip.util.dict')
+067.874  000.005  000.005: require('jsregexp.core')
+067.877  000.041  000.037: require('luasnip-jsregexp')
+067.907  000.174  000.132: require('luasnip.util.jsregexp')
+067.910  000.202  000.028: require('luasnip.nodes.util.trig_engines')
+067.954  001.240  000.138: require('luasnip.nodes.snippet')
+067.957  001.266  000.025: require('luasnip.nodes.duplicate')
+067.959  001.288  000.022: require('luasnip.loaders.snippet_cache')
+067.965  001.331  000.043: require('luasnip.loaders.from_snipmate')
+068.165  000.028  000.028: require('luasnip.util.parser.neovim_ast')
+068.169  000.064  000.036: require('luasnip.util.parser.ast_utils')
+068.219  000.048  000.048: require('luasnip.nodes.functionNode')
+068.270  000.050  000.050: require('luasnip.nodes.choiceNode')
+068.316  000.044  000.044: require('luasnip.nodes.dynamicNode')
+068.352  000.035  000.035: require('luasnip.util.functions')
+068.355  000.287  000.044: require('luasnip.util.parser.ast_parser')
+068.420  000.064  000.064: require('luasnip.util.parser.neovim_parser')
+068.424  000.400  000.050: require('luasnip.util.parser')
+068.451  000.025  000.025: require('luasnip.nodes.snippetProxy')
+068.544  000.091  000.091: require('luasnip.util.jsonc')
+068.553  000.586  000.069: require('luasnip.loaders.from_vscode')
+068.704  000.106  000.106: require('vim.lsp.client')
+070.922  000.033  000.033: require('vim.lsp._capability')
+070.951  000.184  000.150: require('vim.lsp.semantic_tokens')
+071.133  000.021  000.021: require('table.new')
+071.146  000.012  000.012: require('table.clear')
+071.148  000.048  000.015: require('vim._core.table')
+071.171  000.218  000.170: require('vim.lsp._folding_range')
+071.582  000.327  000.327: require('vim.lsp._snippet_grammar')
+071.599  000.427  000.100: require('vim.lsp.inline_completion')
+071.725  000.125  000.125: require('vim.lsp.document_color')
+076.937  000.140  000.140: require('editorconfig')
+077.081  009.030: opening buffers
+077.106  000.025: BufEnter autocommands
+077.109  000.003: editing files in windows
+079.226  002.117: VimEnter autocommands
+079.287  000.061: UIEnter autocommands
+079.540  000.185  000.185: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+079.545  000.073: before starting main loop
+079.924  000.379: first screen update
+079.926  000.002: --- NVIM STARTED ---
+

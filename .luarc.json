@@ -1,0 +1,9 @@
+{
+    "runtime.special": {
+        "love.filesystem.load": "loadfile"
+    },
+    "workspace.library": [
+        "/home/sparky_dev/.local/share/LuaAddons/library",
+        "${3rd}/love2d/library"
+    ]
+}

@@ -7,6 +7,7 @@ return {
 				-- Conform will run multiple formatters sequentially
 				python = { "black", "isort", "ruff" },
 				-- You can customize some of the format options for the filetype (:help conform.format)
+				cs = { "lsp" }, -- Use Roslyn via LSP for c#
 				rust = { "rustfmt", lsp_format = "fallback" },
 				-- Conform will run the first available formatter
 				javascript = { "prettierd", "prettier", stop_after_first = true },

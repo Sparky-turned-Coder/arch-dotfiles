@@ -8,7 +8,12 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 		},
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+				registries = {
+					"github:mason-org/mason-registry",
+					"github:Crashdummyy/mason-registry",
+				},
+			})
 			require("mason-lspconfig").setup({
 				-- Automatically install servers specified here
 				ensure_installed = {
@@ -25,12 +30,44 @@ return {
 				automatic_installation = true,
 			})
 
+			vim.lsp.config("roslyn", {
+				on_attach = function()
+					print("This will run when the server attaches!")
+				end,
+				settings = {
+					["csharp|inlay_hints"] = {
+						csharp_enable_inlay_hints_for_implicit_object_creation = true,
+						csharp_enable_inlay_hints_for_implicit_variable_types = true,
+					},
+					["csharp|code_lens"] = {
+						dotnet_enable_references_code_lens = true,
+					},
+				},
+			})
+
 			vim.lsp.config.lua_ls = {
 				settings = {
 					Lua = {
+						runtime = {
+							version = "LuaJIT",
+						},
+
 						diagnostics = {
 							-- Add global variables that should not be warned about here
-							globals = { "vim", "require", "setup" },
+							globals = { "vim", "require", "setup", "love" },
+
+							disable = {
+								"duplicate-set-field",
+							},
+						},
+
+						workspace = {
+							-- point to your downloaded LuaCATS definitions
+							checkThirdParty = "Apply",
+
+							library = {
+								vim.fn.expand("$HOME") .. "/.local/share/LuaAddons/library",
+							},
 						},
 					},
 				},
@@ -59,7 +96,9 @@ return {
 				},
 			}
 
-			-- Enable the server (not sure if this is necessary yet)
+			-- Enables the specified LSP so it can automatically attach when matching filetypes are opened.
+			vim.lsp.enable("pyright")
+			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("gopls")
 			vim.lsp.enable("gdscript_lsp")
 

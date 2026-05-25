@@ -16,7 +16,20 @@ end, { expr = true, silent = true, desc = "Up (wrap-aware)" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal insert mode" })
 
-vim.keymap.set("n", "<leader>:Neo", ":Neotree<CR>", { desc = "Open Neo-tree." })
+vim.keymap.set("n", "<leader>e", ":Neotree<CR>", { desc = "Open Neo-tree." })
+
+-- Love2D
+vim.keymap.set("n", "<leader>ll", function()
+	vim.cmd("split | terminal love .")
+end)
+
+-- Centerpad
+vim.keymap.set(
+	"n",
+	"<leader>z",
+	"<cmd>lua require'centerpad'.toggle{ leftpad = 36, rightpad = 36 }<CR>",
+	{ desc = "center on screen" }
+)
 
 -- Opening split terminal
 

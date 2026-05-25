@@ -5,6 +5,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
+vim.opt.textwidth = 100
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = true
@@ -20,7 +21,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.cursorline = true
 vim.opt.confirm = true
-vim.opt.scrolloff = 12
+vim.opt.scrolloff = 15
 vim.opt.winborder = "rounded"
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "100"
@@ -28,11 +29,20 @@ vim.opt.encoding = "UTF-8"
 vim.opt.clipboard = "unnamedplus"
 
 vim.g.have_nerd_font = true
+vim.opt.termguicolors = true
+
+vim.opt.lazyredraw = false
 
 require("config.lazy")
 require("config.keymaps")
 require("custom.filetypes")
 require("config.run-python")
+
+vim.api.nvim_set_hl(0, "NotifyBackground", { bg = "#000000" })
+
+vim.api.nvim_create_user_command("Format", function()
+	vim.lsp.buf.format()
+end, {})
 
 --====================
 --   Auto Commands
